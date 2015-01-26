@@ -1,0 +1,163 @@
+/* ==================================
+   BEGIN House Automation Styles
+   ================================== */
+.ha-house-automation {
+    display: table;
+}
+
+.ha-house-automation img {
+    width: 100%;
+    height: auto;
+    display: block;
+    line-height: 0px;
+    font-size: 0px;
+}
+
+.ha-house-automation figcaption {
+    text-align: center;
+    margin: 15px 0px;
+    color: #888;
+}
+
+.ha-visualization-wrapper {
+    display: table-row;
+}
+
+.ha-visualization {
+    display: table-cell;
+}
+
+.ha-visualization.ha-house-visualization {
+    width: 75%;
+}
+
+.ha-visualization.ha-temperature-visualization {
+    width: 25%;
+}
+
+.ha-drawing {
+    position: relative;
+}
+
+.ha-house, .ha-thermometer {
+    position: relative;
+    z-index: 3;
+}
+
+/* ========================
+   BEGIN ha-windows
+   ======================== */
+.ha-window {
+    position: absolute;
+    z-index: 1;
+    background: lightgray;
+}
+
+.ha-window:before, .ha-window:after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    z-index: 2;
+}
+
+.ha-window:before {
+    left: 0;
+    background: rgb(114,0,0); /* Old browsers */
+    background: -moz-linear-gradient(left,  rgba(114,0,0,1) 0%, rgba(124,8,9,1) 1%, rgba(151,8,4,1) 1%, rgba(147,4,0,1) 2%, rgba(143,4,0,1) 2%, rgba(144,0,4,1) 4%, rgba(138,0,0,1) 4%, rgba(141,2,0,1) 5%, rgba(162,0,0,1) 8%, rgba(162,0,0,1) 8%, rgba(172,0,1,1) 10%, rgba(170,0,0,1) 12%, rgba(176,0,2,1) 13%, rgba(173,0,0,1) 15%, rgba(167,2,0,1) 15%, rgba(164,0,0,1) 17%, rgba(154,4,5,1) 18%, rgba(144,2,0,1) 18%, rgba(124,7,0,1) 19%, rgba(88,0,0,1) 19%, rgba(60,0,2,1) 20%, rgba(42,2,2,1) 20%, rgba(39,0,0,1) 21%, rgba(42,3,0,1) 22%, rgba(39,0,1,1) 22%, rgba(41,2,3,1) 23%, rgba(43,0,1,1) 23%, rgba(52,1,0,1) 27%, rgba(71,1,1,1) 31%, rgba(70,0,0,1) 32%, rgba(75,1,2,1) 33%, rgba(94,2,5,1) 34%, rgba(106,1,0,1) 35%, rgba(125,2,4,1) 36%, rgba(125,2,4,1) 37%, rgba(115,1,0,1) 38%, rgba(116,0,1,1) 39%, rgba(126,2,0,1) 40%, rgba(135,0,4,1) 42%, rgba(154,0,0,1) 44%, rgba(162,0,2,1) 44%, rgba(165,5,7,1) 46%, rgba(138,8,6,1) 46%, rgba(100,2,1,1) 47%, rgba(55,0,2,1) 47%, rgba(39,0,0,1) 48%, rgba(31,1,1,1) 48%, rgba(30,0,0,1) 49%, rgba(32,2,2,1) 50%, rgba(32,0,1,1) 51%, rgba(34,3,1,1) 51%, rgba(36,0,0,1) 52%, rgba(50,0,0,1) 55%, rgba(59,1,0,1) 56%, rgba(70,0,0,1) 57%, rgba(90,0,0,1) 57%, rgba(104,1,2,1) 58%, rgba(110,2,0,1) 58%, rgba(109,1,0,1) 59%, rgba(102,2,0,1) 59%, rgba(100,0,2,1) 61%, rgba(120,0,0,1) 63%, rgba(133,0,5,1) 64%, rgba(141,1,0,1) 64%, rgba(147,0,0,1) 65%, rgba(155,2,4,1) 66%, rgba(164,2,0,1) 67%, rgba(170,0,0,1) 69%, rgba(184,0,0,1) 72%, rgba(182,0,1,1) 74%, rgba(174,2,0,1) 75%, rgba(165,5,5,1) 76%, rgba(139,7,5,1) 76%, rgba(100,0,0,1) 77%, rgba(61,0,0,1) 77%, rgba(47,1,3,1) 78%, rgba(41,2,3,1) 78%, rgba(40,1,2,1) 79%, rgba(44,0,0,1) 79%, rgba(42,0,1,1) 81%, rgba(47,0,0,1) 82%, rgba(51,1,0,1) 84%, rgba(62,0,1,1) 86%, rgba(70,2,1,1) 86%, rgba(72,0,1,1) 87%, rgba(91,1,0,1) 88%, rgba(92,2,1,1) 89%, rgba(84,0,0,1) 90%, rgba(86,0,1,1) 91%, rgba(103,0,3,1) 92%, rgba(111,1,0,1) 93%, rgba(152,0,1,1) 96%, rgba(170,0,1,1) 98%, rgba(176,4,0,1) 98%, rgba(179,4,1,1) 99%, rgba(181,0,5,1) 99%, rgba(181,0,5,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(114,0,0,1)), color-stop(1%,rgba(124,8,9,1)), color-stop(1%,rgba(151,8,4,1)), color-stop(2%,rgba(147,4,0,1)), color-stop(2%,rgba(143,4,0,1)), color-stop(4%,rgba(144,0,4,1)), color-stop(4%,rgba(138,0,0,1)), color-stop(5%,rgba(141,2,0,1)), color-stop(8%,rgba(162,0,0,1)), color-stop(8%,rgba(162,0,0,1)), color-stop(10%,rgba(172,0,1,1)), color-stop(12%,rgba(170,0,0,1)), color-stop(13%,rgba(176,0,2,1)), color-stop(15%,rgba(173,0,0,1)), color-stop(15%,rgba(167,2,0,1)), color-stop(17%,rgba(164,0,0,1)), color-stop(18%,rgba(154,4,5,1)), color-stop(18%,rgba(144,2,0,1)), color-stop(19%,rgba(124,7,0,1)), color-stop(19%,rgba(88,0,0,1)), color-stop(20%,rgba(60,0,2,1)), color-stop(20%,rgba(42,2,2,1)), color-stop(21%,rgba(39,0,0,1)), color-stop(22%,rgba(42,3,0,1)), color-stop(22%,rgba(39,0,1,1)), color-stop(23%,rgba(41,2,3,1)), color-stop(23%,rgba(43,0,1,1)), color-stop(27%,rgba(52,1,0,1)), color-stop(31%,rgba(71,1,1,1)), color-stop(32%,rgba(70,0,0,1)), color-stop(33%,rgba(75,1,2,1)), color-stop(34%,rgba(94,2,5,1)), color-stop(35%,rgba(106,1,0,1)), color-stop(36%,rgba(125,2,4,1)), color-stop(37%,rgba(125,2,4,1)), color-stop(38%,rgba(115,1,0,1)), color-stop(39%,rgba(116,0,1,1)), color-stop(40%,rgba(126,2,0,1)), color-stop(42%,rgba(135,0,4,1)), color-stop(44%,rgba(154,0,0,1)), color-stop(44%,rgba(162,0,2,1)), color-stop(46%,rgba(165,5,7,1)), color-stop(46%,rgba(138,8,6,1)), color-stop(47%,rgba(100,2,1,1)), color-stop(47%,rgba(55,0,2,1)), color-stop(48%,rgba(39,0,0,1)), color-stop(48%,rgba(31,1,1,1)), color-stop(49%,rgba(30,0,0,1)), color-stop(50%,rgba(32,2,2,1)), color-stop(51%,rgba(32,0,1,1)), color-stop(51%,rgba(34,3,1,1)), color-stop(52%,rgba(36,0,0,1)), color-stop(55%,rgba(50,0,0,1)), color-stop(56%,rgba(59,1,0,1)), color-stop(57%,rgba(70,0,0,1)), color-stop(57%,rgba(90,0,0,1)), color-stop(58%,rgba(104,1,2,1)), color-stop(58%,rgba(110,2,0,1)), color-stop(59%,rgba(109,1,0,1)), color-stop(59%,rgba(102,2,0,1)), color-stop(61%,rgba(100,0,2,1)), color-stop(63%,rgba(120,0,0,1)), color-stop(64%,rgba(133,0,5,1)), color-stop(64%,rgba(141,1,0,1)), color-stop(65%,rgba(147,0,0,1)), color-stop(66%,rgba(155,2,4,1)), color-stop(67%,rgba(164,2,0,1)), color-stop(69%,rgba(170,0,0,1)), color-stop(72%,rgba(184,0,0,1)), color-stop(74%,rgba(182,0,1,1)), color-stop(75%,rgba(174,2,0,1)), color-stop(76%,rgba(165,5,5,1)), color-stop(76%,rgba(139,7,5,1)), color-stop(77%,rgba(100,0,0,1)), color-stop(77%,rgba(61,0,0,1)), color-stop(78%,rgba(47,1,3,1)), color-stop(78%,rgba(41,2,3,1)), color-stop(79%,rgba(40,1,2,1)), color-stop(79%,rgba(44,0,0,1)), color-stop(81%,rgba(42,0,1,1)), color-stop(82%,rgba(47,0,0,1)), color-stop(84%,rgba(51,1,0,1)), color-stop(86%,rgba(62,0,1,1)), color-stop(86%,rgba(70,2,1,1)), color-stop(87%,rgba(72,0,1,1)), color-stop(88%,rgba(91,1,0,1)), color-stop(89%,rgba(92,2,1,1)), color-stop(90%,rgba(84,0,0,1)), color-stop(91%,rgba(86,0,1,1)), color-stop(92%,rgba(103,0,3,1)), color-stop(93%,rgba(111,1,0,1)), color-stop(96%,rgba(152,0,1,1)), color-stop(98%,rgba(170,0,1,1)), color-stop(98%,rgba(176,4,0,1)), color-stop(99%,rgba(179,4,1,1)), color-stop(99%,rgba(181,0,5,1)), color-stop(100%,rgba(181,0,5,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  rgba(114,0,0,1) 0%,rgba(124,8,9,1) 1%,rgba(151,8,4,1) 1%,rgba(147,4,0,1) 2%,rgba(143,4,0,1) 2%,rgba(144,0,4,1) 4%,rgba(138,0,0,1) 4%,rgba(141,2,0,1) 5%,rgba(162,0,0,1) 8%,rgba(162,0,0,1) 8%,rgba(172,0,1,1) 10%,rgba(170,0,0,1) 12%,rgba(176,0,2,1) 13%,rgba(173,0,0,1) 15%,rgba(167,2,0,1) 15%,rgba(164,0,0,1) 17%,rgba(154,4,5,1) 18%,rgba(144,2,0,1) 18%,rgba(124,7,0,1) 19%,rgba(88,0,0,1) 19%,rgba(60,0,2,1) 20%,rgba(42,2,2,1) 20%,rgba(39,0,0,1) 21%,rgba(42,3,0,1) 22%,rgba(39,0,1,1) 22%,rgba(41,2,3,1) 23%,rgba(43,0,1,1) 23%,rgba(52,1,0,1) 27%,rgba(71,1,1,1) 31%,rgba(70,0,0,1) 32%,rgba(75,1,2,1) 33%,rgba(94,2,5,1) 34%,rgba(106,1,0,1) 35%,rgba(125,2,4,1) 36%,rgba(125,2,4,1) 37%,rgba(115,1,0,1) 38%,rgba(116,0,1,1) 39%,rgba(126,2,0,1) 40%,rgba(135,0,4,1) 42%,rgba(154,0,0,1) 44%,rgba(162,0,2,1) 44%,rgba(165,5,7,1) 46%,rgba(138,8,6,1) 46%,rgba(100,2,1,1) 47%,rgba(55,0,2,1) 47%,rgba(39,0,0,1) 48%,rgba(31,1,1,1) 48%,rgba(30,0,0,1) 49%,rgba(32,2,2,1) 50%,rgba(32,0,1,1) 51%,rgba(34,3,1,1) 51%,rgba(36,0,0,1) 52%,rgba(50,0,0,1) 55%,rgba(59,1,0,1) 56%,rgba(70,0,0,1) 57%,rgba(90,0,0,1) 57%,rgba(104,1,2,1) 58%,rgba(110,2,0,1) 58%,rgba(109,1,0,1) 59%,rgba(102,2,0,1) 59%,rgba(100,0,2,1) 61%,rgba(120,0,0,1) 63%,rgba(133,0,5,1) 64%,rgba(141,1,0,1) 64%,rgba(147,0,0,1) 65%,rgba(155,2,4,1) 66%,rgba(164,2,0,1) 67%,rgba(170,0,0,1) 69%,rgba(184,0,0,1) 72%,rgba(182,0,1,1) 74%,rgba(174,2,0,1) 75%,rgba(165,5,5,1) 76%,rgba(139,7,5,1) 76%,rgba(100,0,0,1) 77%,rgba(61,0,0,1) 77%,rgba(47,1,3,1) 78%,rgba(41,2,3,1) 78%,rgba(40,1,2,1) 79%,rgba(44,0,0,1) 79%,rgba(42,0,1,1) 81%,rgba(47,0,0,1) 82%,rgba(51,1,0,1) 84%,rgba(62,0,1,1) 86%,rgba(70,2,1,1) 86%,rgba(72,0,1,1) 87%,rgba(91,1,0,1) 88%,rgba(92,2,1,1) 89%,rgba(84,0,0,1) 90%,rgba(86,0,1,1) 91%,rgba(103,0,3,1) 92%,rgba(111,1,0,1) 93%,rgba(152,0,1,1) 96%,rgba(170,0,1,1) 98%,rgba(176,4,0,1) 98%,rgba(179,4,1,1) 99%,rgba(181,0,5,1) 99%,rgba(181,0,5,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  rgba(114,0,0,1) 0%,rgba(124,8,9,1) 1%,rgba(151,8,4,1) 1%,rgba(147,4,0,1) 2%,rgba(143,4,0,1) 2%,rgba(144,0,4,1) 4%,rgba(138,0,0,1) 4%,rgba(141,2,0,1) 5%,rgba(162,0,0,1) 8%,rgba(162,0,0,1) 8%,rgba(172,0,1,1) 10%,rgba(170,0,0,1) 12%,rgba(176,0,2,1) 13%,rgba(173,0,0,1) 15%,rgba(167,2,0,1) 15%,rgba(164,0,0,1) 17%,rgba(154,4,5,1) 18%,rgba(144,2,0,1) 18%,rgba(124,7,0,1) 19%,rgba(88,0,0,1) 19%,rgba(60,0,2,1) 20%,rgba(42,2,2,1) 20%,rgba(39,0,0,1) 21%,rgba(42,3,0,1) 22%,rgba(39,0,1,1) 22%,rgba(41,2,3,1) 23%,rgba(43,0,1,1) 23%,rgba(52,1,0,1) 27%,rgba(71,1,1,1) 31%,rgba(70,0,0,1) 32%,rgba(75,1,2,1) 33%,rgba(94,2,5,1) 34%,rgba(106,1,0,1) 35%,rgba(125,2,4,1) 36%,rgba(125,2,4,1) 37%,rgba(115,1,0,1) 38%,rgba(116,0,1,1) 39%,rgba(126,2,0,1) 40%,rgba(135,0,4,1) 42%,rgba(154,0,0,1) 44%,rgba(162,0,2,1) 44%,rgba(165,5,7,1) 46%,rgba(138,8,6,1) 46%,rgba(100,2,1,1) 47%,rgba(55,0,2,1) 47%,rgba(39,0,0,1) 48%,rgba(31,1,1,1) 48%,rgba(30,0,0,1) 49%,rgba(32,2,2,1) 50%,rgba(32,0,1,1) 51%,rgba(34,3,1,1) 51%,rgba(36,0,0,1) 52%,rgba(50,0,0,1) 55%,rgba(59,1,0,1) 56%,rgba(70,0,0,1) 57%,rgba(90,0,0,1) 57%,rgba(104,1,2,1) 58%,rgba(110,2,0,1) 58%,rgba(109,1,0,1) 59%,rgba(102,2,0,1) 59%,rgba(100,0,2,1) 61%,rgba(120,0,0,1) 63%,rgba(133,0,5,1) 64%,rgba(141,1,0,1) 64%,rgba(147,0,0,1) 65%,rgba(155,2,4,1) 66%,rgba(164,2,0,1) 67%,rgba(170,0,0,1) 69%,rgba(184,0,0,1) 72%,rgba(182,0,1,1) 74%,rgba(174,2,0,1) 75%,rgba(165,5,5,1) 76%,rgba(139,7,5,1) 76%,rgba(100,0,0,1) 77%,rgba(61,0,0,1) 77%,rgba(47,1,3,1) 78%,rgba(41,2,3,1) 78%,rgba(40,1,2,1) 79%,rgba(44,0,0,1) 79%,rgba(42,0,1,1) 81%,rgba(47,0,0,1) 82%,rgba(51,1,0,1) 84%,rgba(62,0,1,1) 86%,rgba(70,2,1,1) 86%,rgba(72,0,1,1) 87%,rgba(91,1,0,1) 88%,rgba(92,2,1,1) 89%,rgba(84,0,0,1) 90%,rgba(86,0,1,1) 91%,rgba(103,0,3,1) 92%,rgba(111,1,0,1) 93%,rgba(152,0,1,1) 96%,rgba(170,0,1,1) 98%,rgba(176,4,0,1) 98%,rgba(179,4,1,1) 99%,rgba(181,0,5,1) 99%,rgba(181,0,5,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  rgba(114,0,0,1) 0%,rgba(124,8,9,1) 1%,rgba(151,8,4,1) 1%,rgba(147,4,0,1) 2%,rgba(143,4,0,1) 2%,rgba(144,0,4,1) 4%,rgba(138,0,0,1) 4%,rgba(141,2,0,1) 5%,rgba(162,0,0,1) 8%,rgba(162,0,0,1) 8%,rgba(172,0,1,1) 10%,rgba(170,0,0,1) 12%,rgba(176,0,2,1) 13%,rgba(173,0,0,1) 15%,rgba(167,2,0,1) 15%,rgba(164,0,0,1) 17%,rgba(154,4,5,1) 18%,rgba(144,2,0,1) 18%,rgba(124,7,0,1) 19%,rgba(88,0,0,1) 19%,rgba(60,0,2,1) 20%,rgba(42,2,2,1) 20%,rgba(39,0,0,1) 21%,rgba(42,3,0,1) 22%,rgba(39,0,1,1) 22%,rgba(41,2,3,1) 23%,rgba(43,0,1,1) 23%,rgba(52,1,0,1) 27%,rgba(71,1,1,1) 31%,rgba(70,0,0,1) 32%,rgba(75,1,2,1) 33%,rgba(94,2,5,1) 34%,rgba(106,1,0,1) 35%,rgba(125,2,4,1) 36%,rgba(125,2,4,1) 37%,rgba(115,1,0,1) 38%,rgba(116,0,1,1) 39%,rgba(126,2,0,1) 40%,rgba(135,0,4,1) 42%,rgba(154,0,0,1) 44%,rgba(162,0,2,1) 44%,rgba(165,5,7,1) 46%,rgba(138,8,6,1) 46%,rgba(100,2,1,1) 47%,rgba(55,0,2,1) 47%,rgba(39,0,0,1) 48%,rgba(31,1,1,1) 48%,rgba(30,0,0,1) 49%,rgba(32,2,2,1) 50%,rgba(32,0,1,1) 51%,rgba(34,3,1,1) 51%,rgba(36,0,0,1) 52%,rgba(50,0,0,1) 55%,rgba(59,1,0,1) 56%,rgba(70,0,0,1) 57%,rgba(90,0,0,1) 57%,rgba(104,1,2,1) 58%,rgba(110,2,0,1) 58%,rgba(109,1,0,1) 59%,rgba(102,2,0,1) 59%,rgba(100,0,2,1) 61%,rgba(120,0,0,1) 63%,rgba(133,0,5,1) 64%,rgba(141,1,0,1) 64%,rgba(147,0,0,1) 65%,rgba(155,2,4,1) 66%,rgba(164,2,0,1) 67%,rgba(170,0,0,1) 69%,rgba(184,0,0,1) 72%,rgba(182,0,1,1) 74%,rgba(174,2,0,1) 75%,rgba(165,5,5,1) 76%,rgba(139,7,5,1) 76%,rgba(100,0,0,1) 77%,rgba(61,0,0,1) 77%,rgba(47,1,3,1) 78%,rgba(41,2,3,1) 78%,rgba(40,1,2,1) 79%,rgba(44,0,0,1) 79%,rgba(42,0,1,1) 81%,rgba(47,0,0,1) 82%,rgba(51,1,0,1) 84%,rgba(62,0,1,1) 86%,rgba(70,2,1,1) 86%,rgba(72,0,1,1) 87%,rgba(91,1,0,1) 88%,rgba(92,2,1,1) 89%,rgba(84,0,0,1) 90%,rgba(86,0,1,1) 91%,rgba(103,0,3,1) 92%,rgba(111,1,0,1) 93%,rgba(152,0,1,1) 96%,rgba(170,0,1,1) 98%,rgba(176,4,0,1) 98%,rgba(179,4,1,1) 99%,rgba(181,0,5,1) 99%,rgba(181,0,5,1) 100%); /* IE10+ */
+    background: linear-gradient(to right,  rgba(114,0,0,1) 0%,rgba(124,8,9,1) 1%,rgba(151,8,4,1) 1%,rgba(147,4,0,1) 2%,rgba(143,4,0,1) 2%,rgba(144,0,4,1) 4%,rgba(138,0,0,1) 4%,rgba(141,2,0,1) 5%,rgba(162,0,0,1) 8%,rgba(162,0,0,1) 8%,rgba(172,0,1,1) 10%,rgba(170,0,0,1) 12%,rgba(176,0,2,1) 13%,rgba(173,0,0,1) 15%,rgba(167,2,0,1) 15%,rgba(164,0,0,1) 17%,rgba(154,4,5,1) 18%,rgba(144,2,0,1) 18%,rgba(124,7,0,1) 19%,rgba(88,0,0,1) 19%,rgba(60,0,2,1) 20%,rgba(42,2,2,1) 20%,rgba(39,0,0,1) 21%,rgba(42,3,0,1) 22%,rgba(39,0,1,1) 22%,rgba(41,2,3,1) 23%,rgba(43,0,1,1) 23%,rgba(52,1,0,1) 27%,rgba(71,1,1,1) 31%,rgba(70,0,0,1) 32%,rgba(75,1,2,1) 33%,rgba(94,2,5,1) 34%,rgba(106,1,0,1) 35%,rgba(125,2,4,1) 36%,rgba(125,2,4,1) 37%,rgba(115,1,0,1) 38%,rgba(116,0,1,1) 39%,rgba(126,2,0,1) 40%,rgba(135,0,4,1) 42%,rgba(154,0,0,1) 44%,rgba(162,0,2,1) 44%,rgba(165,5,7,1) 46%,rgba(138,8,6,1) 46%,rgba(100,2,1,1) 47%,rgba(55,0,2,1) 47%,rgba(39,0,0,1) 48%,rgba(31,1,1,1) 48%,rgba(30,0,0,1) 49%,rgba(32,2,2,1) 50%,rgba(32,0,1,1) 51%,rgba(34,3,1,1) 51%,rgba(36,0,0,1) 52%,rgba(50,0,0,1) 55%,rgba(59,1,0,1) 56%,rgba(70,0,0,1) 57%,rgba(90,0,0,1) 57%,rgba(104,1,2,1) 58%,rgba(110,2,0,1) 58%,rgba(109,1,0,1) 59%,rgba(102,2,0,1) 59%,rgba(100,0,2,1) 61%,rgba(120,0,0,1) 63%,rgba(133,0,5,1) 64%,rgba(141,1,0,1) 64%,rgba(147,0,0,1) 65%,rgba(155,2,4,1) 66%,rgba(164,2,0,1) 67%,rgba(170,0,0,1) 69%,rgba(184,0,0,1) 72%,rgba(182,0,1,1) 74%,rgba(174,2,0,1) 75%,rgba(165,5,5,1) 76%,rgba(139,7,5,1) 76%,rgba(100,0,0,1) 77%,rgba(61,0,0,1) 77%,rgba(47,1,3,1) 78%,rgba(41,2,3,1) 78%,rgba(40,1,2,1) 79%,rgba(44,0,0,1) 79%,rgba(42,0,1,1) 81%,rgba(47,0,0,1) 82%,rgba(51,1,0,1) 84%,rgba(62,0,1,1) 86%,rgba(70,2,1,1) 86%,rgba(72,0,1,1) 87%,rgba(91,1,0,1) 88%,rgba(92,2,1,1) 89%,rgba(84,0,0,1) 90%,rgba(86,0,1,1) 91%,rgba(103,0,3,1) 92%,rgba(111,1,0,1) 93%,rgba(152,0,1,1) 96%,rgba(170,0,1,1) 98%,rgba(176,4,0,1) 98%,rgba(179,4,1,1) 99%,rgba(181,0,5,1) 99%,rgba(181,0,5,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#720000', endColorstr='#b50005',GradientType=1 ); /* IE6-9 */
+    
+    -webkit-transition: width .5s;
+    -moz-transition: width .5s;
+    -ms-transition: width .5s;
+    -o-transition: width .5s;
+    transition: width .5s;
+    -webkit-transition-timing-function: ease;
+    -moz-transition-timing-function: ease;
+    -ms-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
+    transition-timing-function: ease;
+}
+
+.ha-window:after {
+    right: 0;
+    background: rgb(181,0,5); /* Old browsers */
+    background: -moz-linear-gradient(left,  rgba(181,0,5,1) 0%, rgba(181,0,5,1) 1%, rgba(179,4,1,1) 1%, rgba(176,4,0,1) 2%, rgba(170,0,1,1) 2%, rgba(152,0,1,1) 4%, rgba(111,1,0,1) 7%, rgba(103,0,3,1) 8%, rgba(86,0,1,1) 9%, rgba(84,0,0,1) 10%, rgba(92,2,1,1) 11%, rgba(91,1,0,1) 12%, rgba(72,0,1,1) 13%, rgba(70,2,1,1) 14%, rgba(62,0,1,1) 14%, rgba(51,1,0,1) 16%, rgba(47,0,0,1) 18%, rgba(42,0,1,1) 19%, rgba(44,0,0,1) 21%, rgba(40,1,2,1) 21%, rgba(41,2,3,1) 22%, rgba(47,1,3,1) 22%, rgba(61,0,0,1) 23%, rgba(100,0,0,1) 23%, rgba(139,7,5,1) 24%, rgba(165,5,5,1) 24%, rgba(174,2,0,1) 25%, rgba(182,0,1,1) 26%, rgba(184,0,0,1) 28%, rgba(170,0,0,1) 31%, rgba(164,2,0,1) 33%, rgba(155,2,4,1) 34%, rgba(147,0,0,1) 35%, rgba(141,1,0,1) 36%, rgba(133,0,5,1) 36%, rgba(120,0,0,1) 37%, rgba(100,0,2,1) 39%, rgba(102,2,0,1) 41%, rgba(109,1,0,1) 41%, rgba(110,2,0,1) 42%, rgba(104,1,2,1) 42%, rgba(90,0,0,1) 43%, rgba(70,0,0,1) 43%, rgba(59,1,0,1) 44%, rgba(50,0,0,1) 45%, rgba(36,0,0,1) 48%, rgba(34,3,1,1) 49%, rgba(32,0,1,1) 49%, rgba(32,2,2,1) 50%, rgba(30,0,0,1) 51%, rgba(31,1,1,1) 52%, rgba(39,0,0,1) 52%, rgba(55,0,2,1) 53%, rgba(100,2,1,1) 53%, rgba(138,8,6,1) 54%, rgba(165,5,7,1) 54%, rgba(162,0,2,1) 56%, rgba(154,0,0,1) 56%, rgba(135,0,4,1) 58%, rgba(126,2,0,1) 60%, rgba(116,0,1,1) 61%, rgba(115,1,0,1) 62%, rgba(125,2,4,1) 63%, rgba(125,2,4,1) 64%, rgba(106,1,0,1) 65%, rgba(94,2,5,1) 66%, rgba(75,1,2,1) 67%, rgba(70,0,0,1) 68%, rgba(71,1,1,1) 69%, rgba(52,1,0,1) 73%, rgba(43,0,1,1) 77%, rgba(41,2,3,1) 77%, rgba(39,0,1,1) 78%, rgba(42,3,0,1) 78%, rgba(39,0,0,1) 79%, rgba(42,2,2,1) 80%, rgba(60,0,2,1) 80%, rgba(88,0,0,1) 81%, rgba(124,7,0,1) 81%, rgba(144,2,0,1) 82%, rgba(154,4,5,1) 82%, rgba(164,0,0,1) 83%, rgba(167,2,0,1) 85%, rgba(173,0,0,1) 85%, rgba(176,0,2,1) 87%, rgba(170,0,0,1) 88%, rgba(172,0,1,1) 90%, rgba(162,0,0,1) 92%, rgba(162,0,0,1) 92%, rgba(141,2,0,1) 95%, rgba(138,0,0,1) 96%, rgba(144,0,4,1) 96%, rgba(143,4,0,1) 98%, rgba(147,4,0,1) 98%, rgba(151,8,4,1) 99%, rgba(124,8,9,1) 99%, rgba(114,0,0,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(181,0,5,1)), color-stop(1%,rgba(181,0,5,1)), color-stop(1%,rgba(179,4,1,1)), color-stop(2%,rgba(176,4,0,1)), color-stop(2%,rgba(170,0,1,1)), color-stop(4%,rgba(152,0,1,1)), color-stop(7%,rgba(111,1,0,1)), color-stop(8%,rgba(103,0,3,1)), color-stop(9%,rgba(86,0,1,1)), color-stop(10%,rgba(84,0,0,1)), color-stop(11%,rgba(92,2,1,1)), color-stop(12%,rgba(91,1,0,1)), color-stop(13%,rgba(72,0,1,1)), color-stop(14%,rgba(70,2,1,1)), color-stop(14%,rgba(62,0,1,1)), color-stop(16%,rgba(51,1,0,1)), color-stop(18%,rgba(47,0,0,1)), color-stop(19%,rgba(42,0,1,1)), color-stop(21%,rgba(44,0,0,1)), color-stop(21%,rgba(40,1,2,1)), color-stop(22%,rgba(41,2,3,1)), color-stop(22%,rgba(47,1,3,1)), color-stop(23%,rgba(61,0,0,1)), color-stop(23%,rgba(100,0,0,1)), color-stop(24%,rgba(139,7,5,1)), color-stop(24%,rgba(165,5,5,1)), color-stop(25%,rgba(174,2,0,1)), color-stop(26%,rgba(182,0,1,1)), color-stop(28%,rgba(184,0,0,1)), color-stop(31%,rgba(170,0,0,1)), color-stop(33%,rgba(164,2,0,1)), color-stop(34%,rgba(155,2,4,1)), color-stop(35%,rgba(147,0,0,1)), color-stop(36%,rgba(141,1,0,1)), color-stop(36%,rgba(133,0,5,1)), color-stop(37%,rgba(120,0,0,1)), color-stop(39%,rgba(100,0,2,1)), color-stop(41%,rgba(102,2,0,1)), color-stop(41%,rgba(109,1,0,1)), color-stop(42%,rgba(110,2,0,1)), color-stop(42%,rgba(104,1,2,1)), color-stop(43%,rgba(90,0,0,1)), color-stop(43%,rgba(70,0,0,1)), color-stop(44%,rgba(59,1,0,1)), color-stop(45%,rgba(50,0,0,1)), color-stop(48%,rgba(36,0,0,1)), color-stop(49%,rgba(34,3,1,1)), color-stop(49%,rgba(32,0,1,1)), color-stop(50%,rgba(32,2,2,1)), color-stop(51%,rgba(30,0,0,1)), color-stop(52%,rgba(31,1,1,1)), color-stop(52%,rgba(39,0,0,1)), color-stop(53%,rgba(55,0,2,1)), color-stop(53%,rgba(100,2,1,1)), color-stop(54%,rgba(138,8,6,1)), color-stop(54%,rgba(165,5,7,1)), color-stop(56%,rgba(162,0,2,1)), color-stop(56%,rgba(154,0,0,1)), color-stop(58%,rgba(135,0,4,1)), color-stop(60%,rgba(126,2,0,1)), color-stop(61%,rgba(116,0,1,1)), color-stop(62%,rgba(115,1,0,1)), color-stop(63%,rgba(125,2,4,1)), color-stop(64%,rgba(125,2,4,1)), color-stop(65%,rgba(106,1,0,1)), color-stop(66%,rgba(94,2,5,1)), color-stop(67%,rgba(75,1,2,1)), color-stop(68%,rgba(70,0,0,1)), color-stop(69%,rgba(71,1,1,1)), color-stop(73%,rgba(52,1,0,1)), color-stop(77%,rgba(43,0,1,1)), color-stop(77%,rgba(41,2,3,1)), color-stop(78%,rgba(39,0,1,1)), color-stop(78%,rgba(42,3,0,1)), color-stop(79%,rgba(39,0,0,1)), color-stop(80%,rgba(42,2,2,1)), color-stop(80%,rgba(60,0,2,1)), color-stop(81%,rgba(88,0,0,1)), color-stop(81%,rgba(124,7,0,1)), color-stop(82%,rgba(144,2,0,1)), color-stop(82%,rgba(154,4,5,1)), color-stop(83%,rgba(164,0,0,1)), color-stop(85%,rgba(167,2,0,1)), color-stop(85%,rgba(173,0,0,1)), color-stop(87%,rgba(176,0,2,1)), color-stop(88%,rgba(170,0,0,1)), color-stop(90%,rgba(172,0,1,1)), color-stop(92%,rgba(162,0,0,1)), color-stop(92%,rgba(162,0,0,1)), color-stop(95%,rgba(141,2,0,1)), color-stop(96%,rgba(138,0,0,1)), color-stop(96%,rgba(144,0,4,1)), color-stop(98%,rgba(143,4,0,1)), color-stop(98%,rgba(147,4,0,1)), color-stop(99%,rgba(151,8,4,1)), color-stop(99%,rgba(124,8,9,1)), color-stop(100%,rgba(114,0,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  rgba(181,0,5,1) 0%,rgba(181,0,5,1) 1%,rgba(179,4,1,1) 1%,rgba(176,4,0,1) 2%,rgba(170,0,1,1) 2%,rgba(152,0,1,1) 4%,rgba(111,1,0,1) 7%,rgba(103,0,3,1) 8%,rgba(86,0,1,1) 9%,rgba(84,0,0,1) 10%,rgba(92,2,1,1) 11%,rgba(91,1,0,1) 12%,rgba(72,0,1,1) 13%,rgba(70,2,1,1) 14%,rgba(62,0,1,1) 14%,rgba(51,1,0,1) 16%,rgba(47,0,0,1) 18%,rgba(42,0,1,1) 19%,rgba(44,0,0,1) 21%,rgba(40,1,2,1) 21%,rgba(41,2,3,1) 22%,rgba(47,1,3,1) 22%,rgba(61,0,0,1) 23%,rgba(100,0,0,1) 23%,rgba(139,7,5,1) 24%,rgba(165,5,5,1) 24%,rgba(174,2,0,1) 25%,rgba(182,0,1,1) 26%,rgba(184,0,0,1) 28%,rgba(170,0,0,1) 31%,rgba(164,2,0,1) 33%,rgba(155,2,4,1) 34%,rgba(147,0,0,1) 35%,rgba(141,1,0,1) 36%,rgba(133,0,5,1) 36%,rgba(120,0,0,1) 37%,rgba(100,0,2,1) 39%,rgba(102,2,0,1) 41%,rgba(109,1,0,1) 41%,rgba(110,2,0,1) 42%,rgba(104,1,2,1) 42%,rgba(90,0,0,1) 43%,rgba(70,0,0,1) 43%,rgba(59,1,0,1) 44%,rgba(50,0,0,1) 45%,rgba(36,0,0,1) 48%,rgba(34,3,1,1) 49%,rgba(32,0,1,1) 49%,rgba(32,2,2,1) 50%,rgba(30,0,0,1) 51%,rgba(31,1,1,1) 52%,rgba(39,0,0,1) 52%,rgba(55,0,2,1) 53%,rgba(100,2,1,1) 53%,rgba(138,8,6,1) 54%,rgba(165,5,7,1) 54%,rgba(162,0,2,1) 56%,rgba(154,0,0,1) 56%,rgba(135,0,4,1) 58%,rgba(126,2,0,1) 60%,rgba(116,0,1,1) 61%,rgba(115,1,0,1) 62%,rgba(125,2,4,1) 63%,rgba(125,2,4,1) 64%,rgba(106,1,0,1) 65%,rgba(94,2,5,1) 66%,rgba(75,1,2,1) 67%,rgba(70,0,0,1) 68%,rgba(71,1,1,1) 69%,rgba(52,1,0,1) 73%,rgba(43,0,1,1) 77%,rgba(41,2,3,1) 77%,rgba(39,0,1,1) 78%,rgba(42,3,0,1) 78%,rgba(39,0,0,1) 79%,rgba(42,2,2,1) 80%,rgba(60,0,2,1) 80%,rgba(88,0,0,1) 81%,rgba(124,7,0,1) 81%,rgba(144,2,0,1) 82%,rgba(154,4,5,1) 82%,rgba(164,0,0,1) 83%,rgba(167,2,0,1) 85%,rgba(173,0,0,1) 85%,rgba(176,0,2,1) 87%,rgba(170,0,0,1) 88%,rgba(172,0,1,1) 90%,rgba(162,0,0,1) 92%,rgba(162,0,0,1) 92%,rgba(141,2,0,1) 95%,rgba(138,0,0,1) 96%,rgba(144,0,4,1) 96%,rgba(143,4,0,1) 98%,rgba(147,4,0,1) 98%,rgba(151,8,4,1) 99%,rgba(124,8,9,1) 99%,rgba(114,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  rgba(181,0,5,1) 0%,rgba(181,0,5,1) 1%,rgba(179,4,1,1) 1%,rgba(176,4,0,1) 2%,rgba(170,0,1,1) 2%,rgba(152,0,1,1) 4%,rgba(111,1,0,1) 7%,rgba(103,0,3,1) 8%,rgba(86,0,1,1) 9%,rgba(84,0,0,1) 10%,rgba(92,2,1,1) 11%,rgba(91,1,0,1) 12%,rgba(72,0,1,1) 13%,rgba(70,2,1,1) 14%,rgba(62,0,1,1) 14%,rgba(51,1,0,1) 16%,rgba(47,0,0,1) 18%,rgba(42,0,1,1) 19%,rgba(44,0,0,1) 21%,rgba(40,1,2,1) 21%,rgba(41,2,3,1) 22%,rgba(47,1,3,1) 22%,rgba(61,0,0,1) 23%,rgba(100,0,0,1) 23%,rgba(139,7,5,1) 24%,rgba(165,5,5,1) 24%,rgba(174,2,0,1) 25%,rgba(182,0,1,1) 26%,rgba(184,0,0,1) 28%,rgba(170,0,0,1) 31%,rgba(164,2,0,1) 33%,rgba(155,2,4,1) 34%,rgba(147,0,0,1) 35%,rgba(141,1,0,1) 36%,rgba(133,0,5,1) 36%,rgba(120,0,0,1) 37%,rgba(100,0,2,1) 39%,rgba(102,2,0,1) 41%,rgba(109,1,0,1) 41%,rgba(110,2,0,1) 42%,rgba(104,1,2,1) 42%,rgba(90,0,0,1) 43%,rgba(70,0,0,1) 43%,rgba(59,1,0,1) 44%,rgba(50,0,0,1) 45%,rgba(36,0,0,1) 48%,rgba(34,3,1,1) 49%,rgba(32,0,1,1) 49%,rgba(32,2,2,1) 50%,rgba(30,0,0,1) 51%,rgba(31,1,1,1) 52%,rgba(39,0,0,1) 52%,rgba(55,0,2,1) 53%,rgba(100,2,1,1) 53%,rgba(138,8,6,1) 54%,rgba(165,5,7,1) 54%,rgba(162,0,2,1) 56%,rgba(154,0,0,1) 56%,rgba(135,0,4,1) 58%,rgba(126,2,0,1) 60%,rgba(116,0,1,1) 61%,rgba(115,1,0,1) 62%,rgba(125,2,4,1) 63%,rgba(125,2,4,1) 64%,rgba(106,1,0,1) 65%,rgba(94,2,5,1) 66%,rgba(75,1,2,1) 67%,rgba(70,0,0,1) 68%,rgba(71,1,1,1) 69%,rgba(52,1,0,1) 73%,rgba(43,0,1,1) 77%,rgba(41,2,3,1) 77%,rgba(39,0,1,1) 78%,rgba(42,3,0,1) 78%,rgba(39,0,0,1) 79%,rgba(42,2,2,1) 80%,rgba(60,0,2,1) 80%,rgba(88,0,0,1) 81%,rgba(124,7,0,1) 81%,rgba(144,2,0,1) 82%,rgba(154,4,5,1) 82%,rgba(164,0,0,1) 83%,rgba(167,2,0,1) 85%,rgba(173,0,0,1) 85%,rgba(176,0,2,1) 87%,rgba(170,0,0,1) 88%,rgba(172,0,1,1) 90%,rgba(162,0,0,1) 92%,rgba(162,0,0,1) 92%,rgba(141,2,0,1) 95%,rgba(138,0,0,1) 96%,rgba(144,0,4,1) 96%,rgba(143,4,0,1) 98%,rgba(147,4,0,1) 98%,rgba(151,8,4,1) 99%,rgba(124,8,9,1) 99%,rgba(114,0,0,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  rgba(181,0,5,1) 0%,rgba(181,0,5,1) 1%,rgba(179,4,1,1) 1%,rgba(176,4,0,1) 2%,rgba(170,0,1,1) 2%,rgba(152,0,1,1) 4%,rgba(111,1,0,1) 7%,rgba(103,0,3,1) 8%,rgba(86,0,1,1) 9%,rgba(84,0,0,1) 10%,rgba(92,2,1,1) 11%,rgba(91,1,0,1) 12%,rgba(72,0,1,1) 13%,rgba(70,2,1,1) 14%,rgba(62,0,1,1) 14%,rgba(51,1,0,1) 16%,rgba(47,0,0,1) 18%,rgba(42,0,1,1) 19%,rgba(44,0,0,1) 21%,rgba(40,1,2,1) 21%,rgba(41,2,3,1) 22%,rgba(47,1,3,1) 22%,rgba(61,0,0,1) 23%,rgba(100,0,0,1) 23%,rgba(139,7,5,1) 24%,rgba(165,5,5,1) 24%,rgba(174,2,0,1) 25%,rgba(182,0,1,1) 26%,rgba(184,0,0,1) 28%,rgba(170,0,0,1) 31%,rgba(164,2,0,1) 33%,rgba(155,2,4,1) 34%,rgba(147,0,0,1) 35%,rgba(141,1,0,1) 36%,rgba(133,0,5,1) 36%,rgba(120,0,0,1) 37%,rgba(100,0,2,1) 39%,rgba(102,2,0,1) 41%,rgba(109,1,0,1) 41%,rgba(110,2,0,1) 42%,rgba(104,1,2,1) 42%,rgba(90,0,0,1) 43%,rgba(70,0,0,1) 43%,rgba(59,1,0,1) 44%,rgba(50,0,0,1) 45%,rgba(36,0,0,1) 48%,rgba(34,3,1,1) 49%,rgba(32,0,1,1) 49%,rgba(32,2,2,1) 50%,rgba(30,0,0,1) 51%,rgba(31,1,1,1) 52%,rgba(39,0,0,1) 52%,rgba(55,0,2,1) 53%,rgba(100,2,1,1) 53%,rgba(138,8,6,1) 54%,rgba(165,5,7,1) 54%,rgba(162,0,2,1) 56%,rgba(154,0,0,1) 56%,rgba(135,0,4,1) 58%,rgba(126,2,0,1) 60%,rgba(116,0,1,1) 61%,rgba(115,1,0,1) 62%,rgba(125,2,4,1) 63%,rgba(125,2,4,1) 64%,rgba(106,1,0,1) 65%,rgba(94,2,5,1) 66%,rgba(75,1,2,1) 67%,rgba(70,0,0,1) 68%,rgba(71,1,1,1) 69%,rgba(52,1,0,1) 73%,rgba(43,0,1,1) 77%,rgba(41,2,3,1) 77%,rgba(39,0,1,1) 78%,rgba(42,3,0,1) 78%,rgba(39,0,0,1) 79%,rgba(42,2,2,1) 80%,rgba(60,0,2,1) 80%,rgba(88,0,0,1) 81%,rgba(124,7,0,1) 81%,rgba(144,2,0,1) 82%,rgba(154,4,5,1) 82%,rgba(164,0,0,1) 83%,rgba(167,2,0,1) 85%,rgba(173,0,0,1) 85%,rgba(176,0,2,1) 87%,rgba(170,0,0,1) 88%,rgba(172,0,1,1) 90%,rgba(162,0,0,1) 92%,rgba(162,0,0,1) 92%,rgba(141,2,0,1) 95%,rgba(138,0,0,1) 96%,rgba(144,0,4,1) 96%,rgba(143,4,0,1) 98%,rgba(147,4,0,1) 98%,rgba(151,8,4,1) 99%,rgba(124,8,9,1) 99%,rgba(114,0,0,1) 100%); /* IE10+ */
+    background: linear-gradient(to right,  rgba(181,0,5,1) 0%,rgba(181,0,5,1) 1%,rgba(179,4,1,1) 1%,rgba(176,4,0,1) 2%,rgba(170,0,1,1) 2%,rgba(152,0,1,1) 4%,rgba(111,1,0,1) 7%,rgba(103,0,3,1) 8%,rgba(86,0,1,1) 9%,rgba(84,0,0,1) 10%,rgba(92,2,1,1) 11%,rgba(91,1,0,1) 12%,rgba(72,0,1,1) 13%,rgba(70,2,1,1) 14%,rgba(62,0,1,1) 14%,rgba(51,1,0,1) 16%,rgba(47,0,0,1) 18%,rgba(42,0,1,1) 19%,rgba(44,0,0,1) 21%,rgba(40,1,2,1) 21%,rgba(41,2,3,1) 22%,rgba(47,1,3,1) 22%,rgba(61,0,0,1) 23%,rgba(100,0,0,1) 23%,rgba(139,7,5,1) 24%,rgba(165,5,5,1) 24%,rgba(174,2,0,1) 25%,rgba(182,0,1,1) 26%,rgba(184,0,0,1) 28%,rgba(170,0,0,1) 31%,rgba(164,2,0,1) 33%,rgba(155,2,4,1) 34%,rgba(147,0,0,1) 35%,rgba(141,1,0,1) 36%,rgba(133,0,5,1) 36%,rgba(120,0,0,1) 37%,rgba(100,0,2,1) 39%,rgba(102,2,0,1) 41%,rgba(109,1,0,1) 41%,rgba(110,2,0,1) 42%,rgba(104,1,2,1) 42%,rgba(90,0,0,1) 43%,rgba(70,0,0,1) 43%,rgba(59,1,0,1) 44%,rgba(50,0,0,1) 45%,rgba(36,0,0,1) 48%,rgba(34,3,1,1) 49%,rgba(32,0,1,1) 49%,rgba(32,2,2,1) 50%,rgba(30,0,0,1) 51%,rgba(31,1,1,1) 52%,rgba(39,0,0,1) 52%,rgba(55,0,2,1) 53%,rgba(100,2,1,1) 53%,rgba(138,8,6,1) 54%,rgba(165,5,7,1) 54%,rgba(162,0,2,1) 56%,rgba(154,0,0,1) 56%,rgba(135,0,4,1) 58%,rgba(126,2,0,1) 60%,rgba(116,0,1,1) 61%,rgba(115,1,0,1) 62%,rgba(125,2,4,1) 63%,rgba(125,2,4,1) 64%,rgba(106,1,0,1) 65%,rgba(94,2,5,1) 66%,rgba(75,1,2,1) 67%,rgba(70,0,0,1) 68%,rgba(71,1,1,1) 69%,rgba(52,1,0,1) 73%,rgba(43,0,1,1) 77%,rgba(41,2,3,1) 77%,rgba(39,0,1,1) 78%,rgba(42,3,0,1) 78%,rgba(39,0,0,1) 79%,rgba(42,2,2,1) 80%,rgba(60,0,2,1) 80%,rgba(88,0,0,1) 81%,rgba(124,7,0,1) 81%,rgba(144,2,0,1) 82%,rgba(154,4,5,1) 82%,rgba(164,0,0,1) 83%,rgba(167,2,0,1) 85%,rgba(173,0,0,1) 85%,rgba(176,0,2,1) 87%,rgba(170,0,0,1) 88%,rgba(172,0,1,1) 90%,rgba(162,0,0,1) 92%,rgba(162,0,0,1) 92%,rgba(141,2,0,1) 95%,rgba(138,0,0,1) 96%,rgba(144,0,4,1) 96%,rgba(143,4,0,1) 98%,rgba(147,4,0,1) 98%,rgba(151,8,4,1) 99%,rgba(124,8,9,1) 99%,rgba(114,0,0,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b50005', endColorstr='#720000',GradientType=1 ); /* IE6-9 */
+    
+    -webkit-transition: width .5s;
+    -moz-transition: width .5s;
+    -ms-transition: width .5s;
+    -o-transition: width .5s;
+    transition: width .5s;
+    -webkit-transition-timing-function: ease;
+    -moz-transition-timing-function: ease;
+    -ms-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
+    transition-timing-function: ease;
+}
+
+.ha-window.ha-light {
+    background: #fff568;
+}
+
+.ha-window.ha-curtains:before, .ha-window.ha-curtains:after {
+    width: 49%;
+}
+
+.ha-window {
+    width: 6.25%;
+    height: 13%;
+    top: 58%;
+    left: 46.5%;
+}
+/* === END ha-windows === */
+
+/* ========================
+   BEGIN Temperature
+   ======================== */
+.ha-quicksilver-container {
+    position: absolute;
+    z-index: 1;
+    width: 80%;
+    height: 52.25%;
+    bottom: 34.5%;
+    left: 10%;
+}
+
+.ha-quicksilver {
+    position: absolute;
+    background: rgb(255,0,0); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(255,0,0,1) 0%, rgba(0,0,255,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,0,0,1)), color-stop(100%,rgba(0,0,255,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(255,0,0,1) 0%,rgba(0,0,255,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(255,0,0,1) 0%,rgba(0,0,255,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(255,0,0,1) 0%,rgba(0,0,255,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(255,0,0,1) 0%,rgba(0,0,255,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0000', endColorstr='#0000ff',GradientType=0 ); /* IE6-9 */
+    
+    width: 80%;
+    height: 0%;
+    padding-bottom: 72%;
+    margin-bottom: -72%;
+    bottom: 0;
+    left: 10%;
+    
+    -webkit-transition: height .5s;
+    -moz-transition: height .5s;
+    -ms-transition: height .5s;
+    -o-transition: height .5s;
+    transition: height .5s;
+}
+/* === END Temperature === */
+/* === END House Automation Styles === */

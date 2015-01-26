@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>    <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>        <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>        <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>House Automation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- BEGIN Styles -->
+        <!-- HTML5 Boilerplate normalizer -->
+        <link rel="stylesheet" href="css/vendor/normalize.min.css">
+        <link rel="stylesheet" href="css/vendor/highlight.js-8.0/default.css">
+        <style>
+            pre {
+                overflow-x: auto;
+            }
+        
+            code {
+                min-width: 2000px;
+            }
+        </style>
+        <!-- END Styles -->
+
+        <!-- Modernizr Script -->
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <!-- Browser settings -->
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div style="max-width: 1200px; margin: 0px auto; padding: 0px 15px;">
+            <h1>Project: House Automation</h1>
+            <p>Author: Alexandru Salajan</p>
+            
+            <div style="height: 25px;"></div>
+            
+            <h2>Description</h2>
+            <p>In order to display the house and the thermometer, I used <em>.svg</em> images. The windows are positioned with percentual units, relative to the house and the lights and curtains are displayed using CSS. This way, the visualization will display perfectly on any device, and house layouts can be easily created.</p>
+            <p>The plugin gets current house data from the server (house image, window positions and current status of lights, curtains and temperature), and then displays the house. On every change in the control panel, data is sent back to the server, and if the server responds with an <em>ok status</em>, the changes are displayed visually.</p>
+            <p>I also added the option of <em>real time monitoring</em> function (in case that multiple users have access to the same house). This option, along with the time interval for doing modification checks can be passed at initialization (see lines <em>40</em> and <em>41</em> in the <em>"main.js"</em> file). After activation, this functionality can be tested by manually modifying the <em>"server"</em> file.</p>
+            
+            <h3>Folder structure</h3>
+            <ol>
+                <li>The application HTML code can be found in the <em>index.html</em> file;</li>
+                <li>Plugin CSS is in the <em>css/house_automation.css</em> file;</li>
+                <li>Plugin JavaScript is in the <em>js/house_automation.js</em> file;</li>
+                <li>Application CSS is in the <em>css/main.css</em> file;</li>
+                <li>Application JavaScript is in the <em>js/main.js</em> file;</li>
+                
+                <li style="margin-top: 20px;">House and thermometer images are in the <em>img</em> folder;</li>
+                <li><em>house_layout</em> - JSON file containing the location of the house image and the window positions;</li>
+                <li><em>server</em> - JSON file containing the status of lights, curtains, and temperature;</li>
+                <li><em>serverACK</em> - JSON file containing the response given by the server, after the application sends data to it;</li>
+                
+                <li style="margin-top: 20px;">Third party CSS is located in the <em>/ccs/vendor folder</em>;</li>
+                <li>Third party JavaScript is located in the <em>/js/vendor</em> folder;</li>
+            </ol>
+            
+            <h2>Main features</h2>
+            <ol>
+                <li>Modularized and extensible;</li>
+                <li>Triggers handleable events;</li>
+                <li>Uses best practices and design patterns: <em>Singelton</em>, <em>Constructors With Prototypes</em> and <em>“Complete” Widget Factory</em>;</li>
+            </ol>
+            
+            <h2>Compatibility</h2>
+            <ol>
+                <li>Responsive layout;</li>
+                <li>The application was tested on the latest versions of <strong>Chrome</strong> and <strong>Firefox</strong>;</li>
+            </ol>
+            
+            <h2>Dependencies</h2>
+            <ol>
+                <li><a href="jquery.com">jQuery</a>;</li>
+                <li><a href="jqueryui.com">jQuery UI</a> - the plugin was built using <em>Widget Factory</em>;</li>
+            </ol>
+            
+            <h2>Third party resources</h2>
+            <ol>
+                <li><a href="html5boilerplate.com">HTML5 Boilerplate normalizer</a>;</li>
+                <li><a href="jquery.com">jQuery</a>;</li>
+                <li><a href="jqueryui.com">jQuery UI</a> - used for styling radio buttons, adding a slider for temperature control, and the Widget Factory;</li>
+                <li><a href="modernizr.com">Modernizr</a> - it was practically never used, since backword compatibility with older browsers was not required;</li>
+                <li><a href="http://proto.io/freebies/onoff/">On/Off Flipswitch HTML5/CSS3 Generator - Proto.io</a> - some CSS I used for styling checkboxes;</li>
+                <li><a href="fortawesome.github.io/Font-Awesome/">Font Awesome</a> - used for displaying a few icons in the Control Panel;</li>
+                
+                <li style="margin-top: 20px;"><a href="http://imgs.steps.dragoart.com/how-to-draw-a-house-step-8_1_000000009115_5.jpg">House image</a></li>
+                <li><a href="http://laptopclipart.com/wp-content/uploads/2013/12/thermometer-pictures-188.jpg">Thermometer image</a></li>
+                
+                <li style="margin-top: 20px;"><a href="http://highlightjs.org/">Highlight.js</a> - used in this README file;</li>
+            </ol>
+            
+            <h2>Usage</h2>
+            <h3>CSS</h3>
+            <p>Include the house automation CSS style in your <em>head</em> tags:</p>
+            <pre><code style="min-width: initial;">&lt;link rel="stylesheet" href="css/house_automation.css"&gt;</code></pre>
+            
+            <h3>HTML</h3>
+            <p>
+                The widget behavior is binded to the Control Panel form. <br />
+                Make sure that the inputs in the form have name attributes, and add an identifier class to the checkboxes that controll the light and curtains.
+            </p>
+            <pre><code style="min-width: initial;">&lt;input class="light-switch" type="checkbox" id="light1" name="light1"&gt;<br />&lt;input class="curtain-switch" type="checkbox" id="curtains1" name="curtains1"&gt;</code></pre>
+            
+            <h3>JavaScript</h3>
+            <p>Include jQuery, jQuery UI and the plugin script in your <em>head</em> tags or right before your <em>body</em> closing tag.</p>
+            <pre><code style="min-width: initial;">&lt;script src="js/vendor/jquery-1.10.2.min.js"&gt;&lt;/script&gt;<br />&lt;script src="js/vendor/jquery-ui-1.10.4.custom/jquery-ui-1.10.4.custom.min.js"&gt;&lt;/script&gt;<br />&lt;script src="js/house_automation.js"&gt;&lt;/script&gt;</code></pre>
+            
+            <h3>Options</h3>
+            <p>Default options and callbacks for the events:</p>
+            <pre><code>options: {
+    houseLayoutURL: null,                       // URL of JSON file containing the house layout (house image and windows positions)
+    serverGetURL: null,                         // URL used to communicate with the server for getting house data
+    serverPostURL: null,                        // URL used to communicate with the server for posting house data after an input in the Control Panel changes
+    visualizationContainer: null,               // the container in which the house visualization will appear
+    thermometerImage: "img/thermometer.svg",    // the image used to display the thermometer
+    realTimeMonitoring: false,                  // if true, the application will monitor any outside to the server data, on a fixed interval (useful if multiple users have access to the same house)
+    monitoringInterval: 5000,                   // monitoring interval in milliseconds (used if option "realTimeMonitoring" is true)
+    lightSwitchClass: "light-switch",           // class used to identify a checkbox in the Control Panel form that handles light switching
+    curtainSwitchClass: "curtain-switch",       // class used to identify a checkbox in the Control Panel form that handles curtain switching
+    temperatureName: "temperature",             // the temperature input name attribute
+    temperatureUnitsName: "temperature_units",  // the temperature units input name attribute
+
+    // callbacks
+    switchLight: null,          // handler for the event generated by switching a light on and off
+    switchCurtains: null,       // handler for the event generated by switching curtains on and off
+    changeTemperature: null     // handler for the event generated by changing the temperature
+}</code></pre>
+            
+            <h3>Fire the plugin</h3>
+            <p>
+                The plugin is binded to he Control Panel form.<br />
+                You need to specify the required options (<em>houseLayoutURL</em>, <em>serverGetURL</em>, <em>serverPostURL</em> and <em>visualizationContainer</em>), or the plugin will print an error message in the console and abort.
+            </p>
+            <pre><code>$( "#control-panel-form" ).automate({
+    houseLayoutURL: "house_layout",             // URL of JSON file containing the house layout (house image and windows positions)
+    serverGetURL: "server",                     // URL used to communicate with the server for getting house data
+    serverPostURL: "serverACK",                 // URL used to communicate with the server for posting house data after an input in the Control Panel changes
+    visualizationContainer: ".main-content",    // the container in which the house visualization will appear
+//  realTimeMonitoring: true,    // uncomment this line to activate realtime monitoring (make changes in the server file to see effects)
+//  monitoringInterval: 1000,    // monitoring interval (default = 5 seconds),
+//  ...</code></pre>
+        </div>
+        
+        <!-- BEGIN Scripts -->
+        <!-- Hightlight.js  -->
+        <script src="js/vendor/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <!-- END Scripts -->
+    </body>
+</html>

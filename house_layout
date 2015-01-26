@@ -1,0 +1,9 @@
+{
+	"house_view_src": "img/house.svg",
+	"windows": [
+		{ "top": "56%", "left": "38%", "width": "3.25%", "height": "16%", "light_name": "light1", "curtains_name": "curtains1" },
+		{ "top": "58%", "left": "46.5%", "width": "6.25%", "height": "13%", "light_name": "light1", "curtains_name": "curtains1" },
+		{ "top": "55%", "left": "75%", "width": "11%", "height": "14%", "light_name": "light2", "curtains_name": "curtains2" },
+		{ "top": "28%", "left": "77%", "width": "7%", "height": "9%", "light_name": "light3", "curtains_name": "curtains3" }
+	]
+}

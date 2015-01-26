@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>    <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>        <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>        <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>House Automation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- BEGIN Styles -->
+        <!-- HTML5 Boilerplate normalizer -->
+        <link rel="stylesheet" href="css/vendor/normalize.min.css">
+        <!-- jQuery UI -->
+        <link rel="stylesheet" href="css/vendor/jquery-ui-1.10.4.custom/smoothness/jquery-ui-1.10.4.custom.min.css">
+        <!-- jQuery Mobile  -->
+        <link rel="stylesheet" href="css/vendor/jquery-mobile-1.4.2/jquery.mobile-1.4.2.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="css/vendor/font-awesome-4.0.3/css/font-awesome.min.css">
+
+        <!-- Plugin CSS -->
+        <link rel="stylesheet" href="css/house_automation.css">
+        <!-- Main CSS file -->
+        <link rel="stylesheet" href="css/main.css">
+        <!-- END Styles -->
+
+        <!-- Modernizr Script -->
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <!-- Browser settings -->
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header id="header" class="clearfix">
+            <h1 class="headline">House Automation</h1>
+        </header>
+
+        <div class="main-container">
+            <a href="#control-panel" class="control-panel-button fa fa-bars"></a>
+            <aside class="control-panel" data-role="panel" data-display="overlay" id="control-panel" data-swipe-close="false">
+                <h2 class="block-title">Control Panel</h2>
+                <form id="control-panel-form" class="block-content accordion">
+                    <h3 class="panel-title">Lights <span class="icon fa fa-lightbulb-o fa-fw"></span></h3>
+                    <div class="container lights-controll">
+                        <ul>
+                            <li>
+                   			    <span class="label">Hallway</span>
+                   			    <div class="input-wrapper">
+							    	<input class="flipswitch light-switch" type="checkbox" id="light1" name="light1">
+							    </div>
+					        </li>
+                            <li>
+                                <span class="label">Living room</span>
+                                <div class="input-wrapper">
+							    	<input class="flipswitch light-switch" type="checkbox" id="light2" name="light2">
+							    </div>
+                            </li>
+                            <li>
+                                <span class="label">Attic</span>
+                                <div class="input-wrapper">
+							    	<input class="flipswitch light-switch" type="checkbox" id="light3" name="light3">
+							    </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <h3 class="panel-title">Curtains <span class="icon fa fa-pause fa-fw"></span></h3>
+                    <div class="container curtains-controll">
+                        <ul>
+                            <li>
+                   			    <span class="label">Hallway</span>
+                   			    <div class="input-wrapper">
+							    	<input class="flipswitch curtain-switch" type="checkbox" id="curtains1" name="curtains1">
+							    </div>
+					        </li>
+                            <li>
+                                <span class="label">Living room</span>
+                                <div class="input-wrapper">
+							    	<input class="flipswitch curtain-switch" type="checkbox" id="curtains2" name="curtains2">
+							    </div>
+                            </li>
+                            <li>
+                                <span class="label">Attic</span>
+                                <div class="input-wrapper">
+							    	<input class="flipswitch curtain-switch" type="checkbox" id="curtains3" name="curtains3">
+							    </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <h3 class="panel-title">Temperature <span class="temperature-indicator">18&deg;C</span></h3>
+                    <div class="container temperature-controll">
+                        <ul>
+                            <li>
+                                <div class="temperature-wrapper">
+                                    <input class="temperature-slider" type="range" value="-40" min="-40" max="45" data-highlight="true">
+                                    <input type="hidden" name="temperature" id="temperature" />
+                                </div>
+                            </li>
+                            <li>
+                            	<fieldset data-role="controlgroup" data-type="horizontal" class="radio temperature-unit-wrapper">
+                                    <input type="radio" id="celsius" name="temperature_units" value="celsius" checked="checked"><label for="celsius">&deg;C</label>
+                                    <input type="radio" id="fahrenheit" name="temperature_units" value="fahrenheit"><label for="fahrenheit">&deg;F</label>
+                                </fieldset>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+            </aside>
+            
+            <section class="main-content-wrapper">
+                <div class="main-content">
+                </div>
+            </section>
+        </div>
+        
+        <footer id="footer">
+            <p class="copyright">Copyright &copy; Alexandru Salajan</p>
+        </footer>
+
+        <!-- BEGIN Scripts -->
+        <!-- jQuery  -->
+        <script src="js/vendor/jquery-1.10.2.min.js"></script>
+        <!-- jQuery UI  -->
+        <script src="js/vendor/jquery-ui-1.10.4.custom.min.js"></script>
+        <!-- jQuery Mobile  -->
+        <script src="js/vendor/jquery.mobile-1.4.2.min.js"></script>
+
+        <!-- Plugin javascript -->
+        <script src="js/house_automation.js"></script>
+        <!-- Main javascript file -->
+        <script src="js/main.js"></script>
+        <!-- END Scripts -->
+    </body>
+</html>

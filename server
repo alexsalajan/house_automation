@@ -1,0 +1,10 @@
+{
+	"light1": "on",
+	"light2": "off",
+	"light3": "off",
+	"curtains1": "on",
+	"curtains2": "off",
+	"curtains3": "off",
+	"temperature": "18",
+	"temperature_units": "celsius"
+}
